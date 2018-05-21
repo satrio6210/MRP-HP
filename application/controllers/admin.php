@@ -377,17 +377,58 @@ class admin extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
+    public function validasikain($id){
+        $where = array('id' => $id);
+        $status ["status"] = 1;
+        $this->data->updateData('kain', $status, $where);
+        $data = $this->data->read('kain')->result_array();
+        $kain['kain'] = $data;
+        $this->load->view('admin/headermasuk1');
+        $this->load->view('admin/datakain', $kain);
+        $this->load->view('admin/footer');
+    }
+
 
     //-----------------------------------------------------------------------------------------------------------------MRPHP
 
     function inputbahan(){
         if ($this->session->has_userdata('username_admin')) {
-            $this->load->view('admin/headermasuk');
+            $this->load->view('admin/headermasuk1');
             $this->load->view('admin/bahan');
             $this->load->view('admin/footer');
         }
         else{
             redirect(base_url('index.php/admin/login'));}}
+
+    function inputkain(){
+        if ($this->session->has_userdata('username_admin')) {
+            $this->load->view('admin/headermasuk1');
+            $this->load->view('admin/kain');
+            $this->load->view('admin/footer');
+        }
+        else{
+            redirect(base_url('index.php/adminP/login'));}}
+
+    function tambahkain(){
+        
+            //$url = base_url().$config['upload_path'].$this->upload->data('file_name');
+            $id = $this->input->post('id');
+            $kategori = $this->input->post('kategori');
+            $warna = $this->input->post('warna');
+            $kode_warna = $this->input->post('kode_warna');
+            $motif = $this->input->post('motif');
+            $tanggal_pesan = $this->input->post('tanggal_pesan');
+            $Status = 0;
+            $data = array(
+                'id' => $id,
+                'kategori' => $kategori,
+                'warna' => $warna,
+                'kode_warna' => $kode_warna,
+                'motif' => $motif,
+                'tanggal_pesan' => $tanggal_pesan,
+                );
+            $this->data->insertData('kain', $data);
+            redirect($uri = base_url('index.php/admin/inputkain'), $method = 'auto', $code = NULL);}
 
     function tambahbahan(){
         $config['upload_path']          = './assets/lapangan/image/';
@@ -427,6 +468,20 @@ class admin extends CI_Controller {
             $tampil['databahan'] = $data;
             $this->load->view('admin/headermasuk');
             $this->load->view('admin/databahan', $tampil);
+            $this->load->view('admin/footer');
+        }
+        else{
+            redirect(base_url('index.php/admin/login'));
+        }
+
+    }
+
+    function datakain(){
+        if ($this->session->has_userdata('username_admin')) {
+            $data = $this->data->selectkain()->result_array();
+            $tampil['datakain'] = $data;
+            $this->load->view('admin/headermasuk1');
+            $this->load->view('admin/datakain', $tampil);
             $this->load->view('admin/footer');
         }
         else{

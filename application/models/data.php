@@ -125,19 +125,11 @@ class data extends CI_Model
 		$query = $this->db->get();
 		return $query;
 	}
-	
-	function selectkain($user){
-        $this->db->select('*');
-		$this->db->from('kain');
-		//$this->db->where('nama', $user);
-		$query = $this->db->get();
-		return $query;
-	}
 
 	function selectpesanan2($user){
         $this->db->select('*');
 		$this->db->from('pesanan');
-		$this->db->where('admin', $user);
+		//$this->db->where('admin', $user);
 		$query = $this->db->get();
 		return $query;
 	}
@@ -152,6 +144,11 @@ class data extends CI_Model
 
 	function selectbahan(){
             return $this->db->query('SELECT `id_bahan`, `nama_bahan`, `tanggal_update`, `supplier`, `lokasi_bahan`, `Stock`, `gambar_bahan` FROM `bahan` WHERE 1'
+            );
+	}
+
+	function selectkain(){
+            return $this->db->query('SELECT `id`, `kategori`, `warna`, `kode_warna`, `motif`, `qty`, `tanggal_pesan`, `status` FROM `kain` WHERE 1'
             );
 	}
 

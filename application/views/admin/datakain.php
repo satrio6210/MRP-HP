@@ -16,38 +16,36 @@
                             
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Type</th>
-                                    <th>Nama</th>
+                                    <th>id</th>
                                     <th>kategori</th>
-                                    <th>Nomor Identitas</th>
-                                    <th>Nama Pesanan</th>
-                                    <th>Detail Pesanan</th>
-                                    <th>Tanggal Pesanan</th>                                   
+                                    <th>warna</th>
+                                    <th>kode-warna</th>
+                                    <th>motif</th>
+                                    <th>qty</th>
+                                    <th>tanggal_pesan</th>                                
                                     <th>Status</th>
                                     <th>HAPUS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                           <?php foreach ($pesanan as $g) { ?>
+                           <?php foreach ($datakain as $g) { ?>
                                 <tr class="odd gradeX">
-                                   <td><?php echo $g['no'] ?></td>
-                                   <td><?php echo $g['type'] ?></td>
-                                   <td><?php echo $g['nama'] ?></td>
+                                   <td><?php echo $g['id'] ?></td>
                                    <td><?php echo $g['kategori'] ?></td>
-                                   <td><?php echo $g['nomer_identitas'] ?></td>
-                                   <td><?php echo $g['nama_pesanan'] ?></td>
-                                   <td><?php echo $g['detail_pesanan'] ?></td>
-                                   <td><?php echo $g['tanggal_pesanan'] ?></td>
-                                   <td class="center"><img style="width: 200px" src="<?php echo $g['nota_pembayaran'] ?>"></td>
+                                   <td><?php echo $g['warna'] ?></td>
+                                   <td><?php echo $g['kode_warna'] ?></td>
+                                   <td><?php echo $g['motif'] ?></td>
+                                   <td><?php echo $g['qty'] ?></td>
+                                   <td><?php echo $g['tanggal_pesan'] ?></td>
+                                   <!--<td class="center"><img style="width: 200px" src="<?php echo $g['nota_pembayaran'] ?>"></td>-->
                                    <td><?php if($g['status']==0) {
-                                           echo '<a class="btn btn-cancel" style="color: white; background: pink" href="'.base_url('admin/validasi/'.$g['no']).'">Decline</a>';
+                                           echo '<a class="btn btn-cancel" style="color: white; background: pink" href="'.base_url('admin/validasikain/'.$g['id']).'">Unsent</a>';
                                        }else{
-                                            echo '<a class="btn btn-success btn-outline" style="color: white; background: green;" >Accept</a>';
+                                            echo '<a class="btn btn-success btn-outline" style="color: white; background: green;" >Sent</a>';
                                        }
                                    ?></td>
                                    <td class="center">
-                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['no']?>">Hapus</a>
+                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['id']?>">Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>

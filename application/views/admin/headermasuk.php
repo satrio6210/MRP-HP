@@ -73,6 +73,9 @@
                     <li>
                         <a href="<?php echo base_url('index.php/admin/inputbahan') ?>"><i class="fa fa-fw fa-edit"></i> Input Data Bahan baku</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url('index.php/admin/inputkain') ?>"><i class="fa fa-fw fa-edit"></i> Input Kain</a>
+                    </li>
                     <!--<li>
                         <a href="<?php echo base_url('index.php/admin/inputkompetisi') ?>"><i class="fa fa-fw fa-edit"></i> Input Data Kompetisi</a>
                     </li>

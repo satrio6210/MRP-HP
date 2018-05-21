@@ -4,7 +4,7 @@
      <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">bahan</h1>
+                    <h1 class="page-header">Kain</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -13,17 +13,24 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Tambah Bahan
+                            Tambah Kain
                         </div>
                         <div class="panel-body">
-                        <?php echo form_open_multipart(base_url('index.php/admin/doEditbahan')); ?>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="Id bahan" name="id" value="<?php echo $id_bahan ?>" readonly></p>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="Nama bahan" name="nama" value="<?php echo $nama_bahan ?>" required></p>
-                                <p class="col-md-6"><input type="date" class="form-control" placeholder="tanggal" name="tanggal" value="<?php echo $tanggal_update ?>" required></p>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="supplier" name="supplier" value="<?php echo $supplier ?>" required></p>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="lokasi" name="lokasi" value="<?php echo $lokasi_bahan ?>" required></p>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="Stock" name="Stock" value="<?php echo $Stock ?>" required></p>
-                                <p class="col-md-6"><input type="file" class="form-control" placeholder="Picture" name="gambar"></p>
+                        <?php echo form_open_multipart(base_url('index.php/admin/tambahkain')); ?>
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="Id" name="id" required></p>
+                                
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="kategori" name="kategori" required></p>
+
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="warna" name="warna" required></p>
+
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="kode warna" name="kode_warna" required></p>
+
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="motif" name="motif" required></p>
+
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="qty" name="qty" required></p>
+
+                                <p class="col-md-6"><input type="date" class="form-control" placeholder="Tanggal pesan" name="tanggal_pesan" required></p>
+
                                 <br>
                                 <p class="col-lg-12"><input type="submit" value="Add" class="btn btn-warning" name=""></p>
                         <?php echo form_close(); ?>
