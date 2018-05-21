@@ -417,6 +417,7 @@ class admin extends CI_Controller {
             $warna = $this->input->post('warna');
             $kode_warna = $this->input->post('kode_warna');
             $motif = $this->input->post('motif');
+            $qty = $this->input->post('qty');
             $tanggal_pesan = $this->input->post('tanggal_pesan');
             $Status = 0;
             $data = array(
@@ -425,6 +426,7 @@ class admin extends CI_Controller {
                 'warna' => $warna,
                 'kode_warna' => $kode_warna,
                 'motif' => $motif,
+                'qty' => $qty,
                 'tanggal_pesan' => $tanggal_pesan,
                 );
             $this->data->insertData('kain', $data);
