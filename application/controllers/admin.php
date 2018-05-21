@@ -391,6 +391,15 @@ class admin extends CI_Controller {
 
     //-----------------------------------------------------------------------------------------------------------------MRPHP
 
+    function hitungROP(){
+        if ($this->session->has_userdata('username_admin')) {
+            $this->load->view('admin/headermasuk');
+            $this->load->view('admin/hitungROP');
+            $this->load->view('admin/footer');
+        }
+        else{
+            redirect(base_url('index.php/admin/login'));}}
+
     function inputbahan(){
         if ($this->session->has_userdata('username_admin')) {
             $this->load->view('admin/headermasuk');
