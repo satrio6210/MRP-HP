@@ -15,7 +15,7 @@ class Lapangan extends CI_Controller {
             $this->load->view('lapangan/home', $lapangan);
             $this->load->view('lapangan/footer');
 	}
-
+/*
     public function homePil($type, $page = 'homePilihan'){
         
         $data = $this->data->selectLapanganSewa($type)->result_array();
@@ -104,7 +104,7 @@ class Lapangan extends CI_Controller {
                     redirect(base_url('lapangan/login'));
             }
     }
-
+*/
 	public function detail($id, $page="detail"){
             
             $data = $this->data->readWhere('lapangan', $id, 'id_lapangan')->result_array();
@@ -116,7 +116,7 @@ class Lapangan extends CI_Controller {
             $this->load->view('lapangan/detail', $lapangan);
             $this->load->view('lapangan/footer');
 	}
-
+/*
     public function detailkompetisi($id, $page="detail"){
             $data = $this->data->readWhere('kompetisi', $id, 'id_kompetisi')->result_array();
             $where = array('id_kompetisi' => $id);
@@ -134,7 +134,7 @@ class Lapangan extends CI_Controller {
             $this->load->view('lapangan/header', $tampil);
             $this->load->view('lapangan/kompetisi', $tampil);
             $this->load->view('lapangan/footer');       
-    }
+    }*/
     //-------------------------------------upload nota modified for pesanan instead lapangan
 
     public function uploadnota($no, $page = "uploadnota"){
@@ -211,7 +211,7 @@ class Lapangan extends CI_Controller {
             $data = array(
                     'nota_pembayaran'=>$url
                     );
-            $this->data->updateData('jadwal', $data, $where);
+            $this->data->updateData('pesanan', $data, $where);
             redirect($uri = base_url('lapangan/pesanan'), $method = 'auto', $code = NULL);
         }
     }
