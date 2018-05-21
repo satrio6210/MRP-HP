@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2018 at 07:47 AM
+-- Generation Time: May 21, 2018 at 09:08 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -37,10 +37,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username_admin`, `password_admin`, `type`) VALUES
-('admin', 'password', 'futsal'),
-('admin169', 'coba', 'futsal'),
-('adminmayasi', 'a50afcc1c92c79a407798ecd5320e33a345c9437', 'basket'),
-('coba', 'a50afcc1c92c79a407798ecd5320e33a345c9437', 'futsal');
+('admin169', 'coba', 'futsal');
 
 -- --------------------------------------------------------
 
@@ -54,6 +51,7 @@ CREATE TABLE `bahan` (
   `tanggal_update` date NOT NULL,
   `supplier` varchar(200) NOT NULL,
   `lokasi_bahan` varchar(200) NOT NULL,
+  `Stock` varchar(500) NOT NULL,
   `gambar_bahan` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,8 +59,8 @@ CREATE TABLE `bahan` (
 -- Dumping data for table `bahan`
 --
 
-INSERT INTO `bahan` (`id_bahan`, `nama_bahan`, `tanggal_update`, `supplier`, `lokasi_bahan`, `gambar_bahan`) VALUES
-('101', 'wasd', '2018-05-21', 'wasd', 'wasd', 'http://localhost/SportyFast/./assets/lapangan/image/holy-union-font-4-big2.png');
+INSERT INTO `bahan` (`id_bahan`, `nama_bahan`, `tanggal_update`, `supplier`, `lokasi_bahan`, `Stock`, `gambar_bahan`) VALUES
+('101', 'wasd', '2018-05-21', 'wasd', 'wasd', '1000000', 'http://localhost/MRP-HP/./assets/lapangan/image/holy-union-font-4-big4.png');
 
 -- --------------------------------------------------------
 
@@ -91,10 +89,7 @@ CREATE TABLE `jadwal` (
 
 INSERT INTO `jadwal` (`no`, `type`, `nama`, `admin`, `kategori`, `nomer_identitas`, `nama_lapangan`, `tanggal`, `jam`, `lama_sewa`, `nota_pembayaran`, `status`) VALUES
 ('1506941920', 'futsal', 'Nur laili', 'admin169', 'Pelajar', '5215100000', 'Lapangan C', '2017-10-02', '01:00:00', 1, '', 1),
-('1508373366', 'basket', 'Putra', 'adminmayasi', 'Pelajar', '05241150000020', 'Lapangan Bayasi ', '2017-10-19', '09:00:00', 1, '', 0),
-('1508773362', 'basket', 'tester', 'adminmayasi', 'Pelajar', '0000000000000', 'Lapangan Bayasi ', '2018-10-19', '09:00:00', 1, '', 0),
-('1512451068', 'basket', 'laili cantik', 'adminmayasi', 'Pelajar', '', 'Lapangan Bayasi', '2017-12-19', '09:55:00', 1, '', 0),
-('1512823617', 'basket', 'tester', 'adminmayasi', 'Pelajar', '', 'Lapangan Bayasi', '2012-12-12', '12:12:00', 1, '', 0);
+('1508373366', 'basket', 'Putra', 'adminmayasi', 'Pelajar', '05241150000020', 'Lapangan Bayasi ', '2017-10-19', '09:00:00', 1, '', 1);
 
 -- --------------------------------------------------------
 
@@ -174,7 +169,8 @@ CREATE TABLE `pesanan` (
 INSERT INTO `pesanan` (`no`, `type`, `nama`, `admin`, `kategori`, `nomer_identitas`, `nama_pesanan`, `jenis_pesanan`, `detail_pesanan`, `tanggal_pesanan`, `nota_pembayaran`, `status`) VALUES
 ('324235', 'drgdgr', 'rdrgdrg', 'admin169', 'drgdrgd', 'rgdg', 'drgdg', 'fdbd', 'dsfgdr', '2018-05-21', '', 0),
 ('1234', 'wadssfd', 'coba', 'admin169', 'adf', '12232354', 'sfdg', 'drhgdthfd', 'sfsefsg', '2018-05-21', '', 0),
-('1233453', 'dsfg', 'coba', 'admin169', 'fdgdr', '32443', 'fdg', 'rdgdfg', 'drhbfgchnft', '2018-05-21', '', 0);
+('1233453', 'dsfg', 'coba', 'admin169', 'fdgdr', '32443', 'fdg', 'rdgdfg', 'drhbfgchnft', '2018-05-21', '', 1),
+('1', 'batik', 'coba', 'admin169', 'baju', '123', 'saya', 'exclusive', 'yang bagus ya pak', '2018-05-21', 'http://localhost/MRP-HP/./assets/nota/holy-union-font-4-big2.png', 0);
 
 -- --------------------------------------------------------
 
@@ -194,18 +190,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `password_user`, `no_telp`) VALUES
-('', '', '94e723dc305f28b58ba1aba04e14aade037baa95', ''),
 ('100000000000001', 'user', 'user', '1'),
-('12345', 'coba', 'a50afcc1c92c79a407798ecd5320e33a345c9437', '12345'),
-('ada', 'adada', 'f76afd5806d7c8d41d890ad0321a2676d02a3292', '1233'),
-('aisyahparamastri', 'aisyah paramastri khairina', '5663bec6b51338020c7ebc0d8d65b7689d19abed', '081234567890'),
-('arakhrn', 'ara', '5663bec6b51338020c7ebc0d8d65b7689d19abed', 'coba'),
 ('coba', 'coba', 'coba', '1234'),
-('cobain', 'cobain', 'cobain', '123456'),
-('knpooami', 'kttirvaq', '3beca18752e89129a0aff16d61918cca6f43274d', '555-666-0606'),
-('modavidck', 'mohamad david', '5663bec6b51338020c7ebc0d8d65b7689d19abed', '085338436164'),
-('nurlailiis', 'laili cantik', '5663bec6b51338020c7ebc0d8d65b7689d19abed', '085745907300'),
-('tester', 'tester', '9bcbcdd3dd35576954ee30478150f2f055026d1f', '123');
+('cobain', 'cobain', 'cobain', '123456');
 
 -- --------------------------------------------------------
 
