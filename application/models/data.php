@@ -107,12 +107,12 @@ class data extends CI_Model
 		return $query;
 	}
         
-	public function enkripsi($password){
+	/*public function enkripsi($password){
         $key = $this->config->item('encryption_key');
 	    $salt1 = hash('sha1', $key . $password);
 	    $salt2 = hash('sha1', $password . $key);
 	    return hash('sha1', $salt1 . $password . $salt2);	
-	}
+	}*/
 	//---------------------------------------------------------------------------MRPHP ZONE below-----------------------------------
 	function insertData($table, $data){
 		$this->db->insert($table, $data );

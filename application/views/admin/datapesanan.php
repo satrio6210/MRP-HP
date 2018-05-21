@@ -22,6 +22,7 @@
                                     <th>kategori</th>
                                     <th>Nomor Identitas</th>
                                     <th>Nama Pesanan</th>
+                                    <th>Detail Pesanan</th>
                                     <th>Tanggal Pesanan</th>                                   
                                     <th>Status</th>
                                     <th>HAPUS</th>
@@ -34,7 +35,7 @@
                                    <td><?php echo $g['type'] ?></td>
                                    <td><?php echo $g['nama'] ?></td>
                                    <td><?php echo $g['kategori'] ?></td>
-                                   <td><?php echo $g['nomor_identitas'] ?></td>
+                                   <td><?php echo $g['nomer_identitas'] ?></td>
                                    <td><?php echo $g['nama_pesanan'] ?></td>
                                    <td><?php echo $g['detail_pesanan'] ?></td>
                                    <td><?php echo $g['tanggal_pesanan'] ?></td>

@@ -80,6 +80,8 @@ class admin extends CI_Controller {
         else{
             redirect(base_url('index.php/admin/login'));}}
     */
+
+    /*
     public function datapenyewaan(){
         if ($this->session->has_userdata('username_admin')) {
             $data = $this->data->selectJadwal2($this->session->userdata('username_admin'))->result_array();
@@ -90,8 +92,8 @@ class admin extends CI_Controller {
         }
         else{
             redirect(base_url('index.php/admin/index'));}}
-            
-    public function cek_login(){
+     */       
+    /*public function cek_login(){
             $data = $this->data->read('admin')->result_array();
             $username = $this->input->post('username');
             $password = $this->input->post('password');
@@ -125,7 +127,46 @@ class admin extends CI_Controller {
             else{
                 $this->session->set_flashdata('pesan', '<strong>Maaf</strong> Username anda salah.
                             ');
+               redirect(base_url('index.php/admin/index'));}}*/
+
+               //----------------------------------------------- cek login original diatas ^^^
+
+    public function cek_login(){
+            $data = $this->data->read('admin')->result_array();
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+            $read = $this->data->readWhere('admin', $username, 'username_admin')->result_array();
+            $pass1 = $password;
+            foreach ($read as $id) {
+                $admin = $id['username_admin'];
+                $pass = $id['password_admin'];
+                $type = $id['type'];
+                }
+            $pass1 = $password;         
+            if ($username==$admin) {
+                if ($pass1==$pass) {
+                    $pass1 = $password;
+                    $data = array(
+                        'username_admin'=>$admin,
+                        'type'=>$type
+                    );
+                    $this->session->set_userdata($data);
+                    $this->load->view('admin/headermasuk');
+                    $this->load->view('admin/dashboard');
+                    $this->load->view('admin/footer');
+                            
+                }
+                else{
+                    $this->session->set_flashdata('pesan', '<strong>Maaf</strong> Password anda salah.
+                            ');
+                    redirect('index.php/admin/index');
+                } 
+            }
+            else{
+                $this->session->set_flashdata('pesan', '<strong>Maaf</strong> Username anda salah.
+                            ');
                redirect(base_url('index.php/admin/index'));}}
+
 
     function deleteDataLapangan($id){  
         $where = array('id_lapangan' => $id ); 
@@ -149,7 +190,7 @@ class admin extends CI_Controller {
         $this->load->view('admin/footer');
         redirect(base_url('index.php/admin'));}
 
-    function inputlapangan(){
+    /*function inputlapangan(){
         if ($this->session->has_userdata('username_admin')) {
             $this->load->view('admin/headermasuk');
             $this->load->view('admin/lapangan');
@@ -318,7 +359,7 @@ class admin extends CI_Controller {
                 );
             $this->data->updateData('kompetisi', $data, $where);
             redirect($uri = base_url('index.php/admin/inputkompetisi'), $method = 'auto', $code = NULL);}}
-
+    */
     function deleteData($id){  
         $where = array('no' => $id ); 
         $res = $this->data->deleteData($where); 

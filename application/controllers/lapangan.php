@@ -240,7 +240,7 @@ class Lapangan extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             $read = $this->data->readWhere('user', $username, 'id_user')->result_array();
-            $enkripsi = $this->data->enkripsi($password);
+            $enkripsi = $password;
             foreach ($read as $r) {
                 $user = $r['id_user'];
                         $pass = $r['password_user'];
@@ -248,10 +248,10 @@ class Lapangan extends CI_Controller {
                         $no_telp = $r['no_telp'];
                 }
 
-            $enkripsi = $this->data->enkripsi($password);	       
+            $enkripsi = $password;	       
             if ($username==$user) {
                 if ($enkripsi==$pass) {
-                    $enkripsi = $this->data->enkripsi($password);
+                    $enkripsi = $password;
                     $data = array(
                         'username'  	=> $user,                    
                         'nama'              => $nama,
@@ -299,7 +299,7 @@ class Lapangan extends CI_Controller {
             $password_user = $this->input->post('password_user');
             $no_telp = $this->input->post('no_telp');
             $cek_user = $this->data->readWhere('user', $id_user, 'id_user')->num_rows();	
-            $enkripsi = $this->data->enkripsi($password_user);
+            $enkripsi = $password_user;
                                   
             if($cek_user>0){
                     $this->session->set_flashdata('user_available', '
