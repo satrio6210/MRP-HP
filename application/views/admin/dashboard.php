@@ -28,13 +28,13 @@
                             <p>
                                 Selamat Datang Admin , anda memiliki hak pada panel Admin ini. Hak Anda sebagai berikut :
                                 <br></br>
-                                1. Merubah dan Memasukkan Data  yang disewakan oleh GOR anda baik untuk pelajar maupun umum
+                                1. Merubah dan Memasukkan Data  Bahan Baku
                                 <br></br>
-                                2. Menambahkan Data Penyewaan  
+                                2. Mengakses Data Pemesanan  
                                 <br></br>
-                                3. Menghapus Data Penyewaan  
-                                <br></br>
-                                4. Mengakses Data Penyewaan  
+                                3. Menghapus Data pemesanan  
+                                <!--<br></br>
+                                4.-->   
                             </p>
                             </li>
 
