@@ -22,6 +22,7 @@
                                 <p class="col-md-6"><input type="date" class="form-control" placeholder="tanggal" name="tanggal" value="<?php echo $tanggal_update ?>" required></p>
                                 <p class="col-md-6"><input type="text" class="form-control" placeholder="supplier" name="supplier" value="<?php echo $supplier ?>" required></p>
                                 <p class="col-md-6"><input type="text" class="form-control" placeholder="lokasi" name="lokasi" value="<?php echo $lokasi_bahan ?>" required></p>
+                                <p class="col-md-6"><input type="text" class="form-control" placeholder="Stock" name="Stock" value="<?php echo $Stock ?>" required></p>
                                 <p class="col-md-6"><input type="file" class="form-control" placeholder="Picture" name="gambar"></p>
                                 <br>
                                 <p class="col-lg-12"><input type="submit" value="Add" class="btn btn-warning" name=""></p>

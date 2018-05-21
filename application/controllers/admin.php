@@ -408,12 +408,14 @@ class admin extends CI_Controller {
             $tanggal = $this->input->post('tanggal');
             $supplier = $this->input->post('supplier');
             $lokasi = $this->input->post('lokasi');
+            $Stock = $this->input->post('Stock');
             $data = array(
                 'id_bahan' => $id,
                 'nama_bahan' => $nama,
                 'tanggal_update' => $tanggal,
                 'supplier' => $supplier,
                 'lokasi_bahan' => $lokasi,
+                'Stock' => $Stock,
                 'gambar_bahan' => $url, 
                 );
             $this->data->insertData('bahan', $data);
@@ -448,12 +450,14 @@ class admin extends CI_Controller {
             $tanggal = $update[0]['tanggal_update'];
             $supplier = $update[0]['supplier'];
             $lokasi = $update[0]['lokasi_bahan'];
+            $Stock = $update[0]['Stock'];
             $data = array(
                 'id_bahan' => $id,
                 'nama_bahan' => $nama,
                 'tanggal_update' => $tanggal,
                 'supplier' => $supplier,
                 'lokasi_bahan' => $lokasi,
+                'Stock' => $Stock,
                 'gambar_bahan' => $image, 
                 );
         $this->load->view('admin/headermasuk');
@@ -482,12 +486,14 @@ class admin extends CI_Controller {
             $tanggal = $this->input->post('tanggal');
             $supplier = $this->input->post('supplier');
             $lokasi = $this->input->post('lokasi');
+            $Stock = $this->input->post('Stock');
             $data = array(
                 'id_bahan' => $id,
                 'nama_bahan' => $nama,
                 'tanggal_update' => $tanggal,
                 'supplier' => $supplier,
                 'lokasi_bahan' => $lokasi,
+                'Stock' => $Stock,
                 'gambar_bahan' => $url, 
                 );
             $this->data->updateData('bahan', $data, $where);

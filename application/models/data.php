@@ -143,7 +143,7 @@ class data extends CI_Model
 	}*/
 
 	function selectbahan(){
-            return $this->db->query('SELECT `id_bahan`, `nama_bahan`, `tanggal_update`, `supplier`, `lokasi_bahan`, `gambar_bahan` FROM `bahan` WHERE 1'
+            return $this->db->query('SELECT `id_bahan`, `nama_bahan`, `tanggal_update`, `supplier`, `lokasi_bahan`, `Stock`, `gambar_bahan` FROM `bahan` WHERE 1'
             );
 	}
 

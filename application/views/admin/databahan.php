@@ -24,6 +24,7 @@
                                     <th style="width: 250px;">Tanggal</th>
                                     <th style="width: 250px;">Supplier</th>
                                     <th style="width: 250px;">Lokasi</th>
+                                    <th style="width: 250px;">Stock</th>
                                     <th style="width: 250px;">Gambar</th>
                                     <th style="width: 250px;">Aksi</th>
                                 </tr>
@@ -36,6 +37,7 @@
                                     <td class="center"><?php echo $d['tanggal_update'] ?></td>
                                     <td><?php echo $d['supplier'] ?></td>
                                     <td><?php echo $d['lokasi_bahan'] ?></td>
+                                    <td><?php echo $d['Stock'] ?></td>
                                     <td class="center"><img style="width: 200px" src="<?php echo $d['gambar_bahan'] ?>"></td>
                                     <td class="center">
                                         <a class="btn btn-primary btn-outline" href="<?php echo base_url()."index.php/admin/editDatabahan/".$d['id_bahan']?>">Update</a>
