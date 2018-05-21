@@ -20,7 +20,7 @@
 			<tr>
 				<td>No</td>
 				<td>:</td>
-				<td><input type="text" value="<?php echo $jadwal ?>" readonly name="no" required></td>
+				<td><input type="text" value="<?php echo $pesanan ?>" readonly name="no" required></td>
 			</tr>
 			<tr>
 				<td>Gambar</td>
@@ -31,8 +31,7 @@
 			<tr>
 				<td></td>
 				<td></td>
-				<?php 
-				$date = date_default_timezone_set('Asia/Jakarta');
+				<?php $date = date_default_timezone_set('Asia/Jakarta');
     			echo date('Y-m-d H:i:s');
 				 ?>
 				<td><p class="col-lg-12"><input type="submit" value="Add" class="btn btn-warning"></td>

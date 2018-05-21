@@ -162,6 +162,14 @@ class data extends CI_Model
 		$this->db->insert($data, $table);
 	}
 
+	function get_pesanan($no){
+		$this->db->select('*');
+ 		$this->db->from('pesanan');
+ 		$this->db->where('no', $no);
+ 		$query = $this->db->get();
+ 		return $query->result_array();
+    }
+
 	//------------------------------------------------------------------------------MRPHP ZONE ABOVE--------------------------------
 
 	function createJadwal($table, $data){

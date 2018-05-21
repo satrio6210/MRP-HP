@@ -135,13 +135,13 @@ class Lapangan extends CI_Controller {
             $this->load->view('lapangan/kompetisi', $tampil);
             $this->load->view('lapangan/footer');       
     }
-
+    //-------------------------------------upload nota modified for pesanan instead lapangan
 
     public function uploadnota($no, $page = "uploadnota"){
             if ($this->session->has_userdata('username')) {
-                    $data= $this->data->get_jadwal($no);
+                    $data= $this->data->get_pesanan($no);
                     $id = $data[0]['no'];  
-                    $lapangan['jadwal'] = $id;
+                    $lapangan['pesanan'] = $id;
                     $lapangan['page'] = $page;
                     $this->load->view('lapangan/header', $lapangan);
                     $this->load->view('lapangan/uploadnota', $lapangan);
@@ -151,7 +151,7 @@ class Lapangan extends CI_Controller {
                     redirect(base_url('lapangan/login'));
             }
     }
-    
+    //-----------------------------------------------------------------------------------------
         
  	public function signup($page = "signup"){
             $data = $this->data->read('user')->result_array();
@@ -212,7 +212,7 @@ class Lapangan extends CI_Controller {
                     'nota_pembayaran'=>$url
                     );
             $this->data->updateData('jadwal', $data, $where);
-            redirect($uri = base_url('lapangan/sewajadwal'), $method = 'auto', $code = NULL);
+            redirect($uri = base_url('lapangan/pesanan'), $method = 'auto', $code = NULL);
         }
     }
 
