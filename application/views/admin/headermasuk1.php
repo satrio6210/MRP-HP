@@ -88,9 +88,9 @@
                     <!--<<li>
                         <a href="<?php echo base_url('index.php/admin/datakompetisi') ?>"><i class="fa fa-fw fa-table"></i> Data Kompetisi</a>
                     </li>-->
-                    <li>
+                    <!--<li>
                         <a href="<?php echo base_url('index.php/admin/datapesanan') ?>"><i class="fa fa-fw fa-edit"></i> Data Pemesanan</a>
-                    </li>
+                    </li>-->
                     <!--<li>
                         <a href="<?php echo base_url('index.php/admin/datapenyewaan') ?>"><i class="fa fa-fw fa-edit"></i> Data Penyewaan</a>
                     </li>-->

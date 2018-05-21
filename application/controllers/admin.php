@@ -393,7 +393,7 @@ class admin extends CI_Controller {
 
     function inputbahan(){
         if ($this->session->has_userdata('username_admin')) {
-            $this->load->view('admin/headermasuk1');
+            $this->load->view('admin/headermasuk');
             $this->load->view('admin/bahan');
             $this->load->view('admin/footer');
         }
@@ -483,6 +483,20 @@ class admin extends CI_Controller {
             $data = $this->data->selectkain()->result_array();
             $tampil['datakain'] = $data;
             $this->load->view('admin/headermasuk1');
+            $this->load->view('admin/datakain', $tampil);
+            $this->load->view('admin/footer');
+        }
+        else{
+            redirect(base_url('index.php/admin/login'));
+        }
+
+    }
+
+    function datakain1(){
+        if ($this->session->has_userdata('username_admin')) {
+            $data = $this->data->selectkain()->result_array();
+            $tampil['datakain'] = $data;
+            $this->load->view('admin/headermasuk');
             $this->load->view('admin/datakain', $tampil);
             $this->load->view('admin/footer');
         }
