@@ -17,6 +17,7 @@
                                     <th>kategori</th>
                                     <th>Nomor Identitas</th>
                                     <th>Nama Pesanan</th>
+                                    <th>Jenis Pesanan</th>
                                     <th>Detail Pesanan</th>
                                     <th>Tanggal Pesanan</th>                                   
                                     <th>Status</th>
@@ -32,8 +33,8 @@
                                    <td><?php echo $g['kategori'] ?></td>
                                    <td><?php echo $g['nomer_identitas'] ?></td>
                                    <td><?php echo $g['nama_pesanan'] ?></td>
+                                   <td><?php echo $g['jenis_pesanan'] ?></td>
                                    <td><?php echo $g['detail_pesanan'] ?></td>
-                                   <td><?php echo $g['nama_pesanan'] ?></td>
                                    <td><?php echo $g['tanggal_pesanan'] ?></td>
                                    <td><?php if($g['status']==0) {
                                            echo '<a class="btn btn-secondary btn-outline" >Belum Lunas</a>';
