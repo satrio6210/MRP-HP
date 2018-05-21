@@ -54,7 +54,13 @@
                 <li><a class="nav-link" href="<?php echo base_url('lapangan/homePil/'.'badmintonKom');?>">Badminton</a></li>
               </ul>
             </li> -->
-            
+            <li class="nav-item">
+              <?php 
+              if($this->session->has_userdata('username')){
+                echo '<a class="nav-link" href="'.base_url('lapangan/kain').'">Status Kain</a>';
+              }
+            ?>
+            </li>
             <li class="nav-item">
               <?php 
               if($this->session->has_userdata('username')){
@@ -81,7 +87,7 @@
       </div>
     </nav>
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('http://www.hollywoodcleanersltd.com/attachments/Image/aa.jpg')">
+    <header class="masthead" style="background-image: url('https://www.goldingofnewmarket.co.uk/Content/User/Upload/StaticPages/Golding%20Tailoring%20Crop%202.jpg')">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">

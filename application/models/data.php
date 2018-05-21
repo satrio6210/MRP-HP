@@ -126,6 +126,14 @@ class data extends CI_Model
 		return $query;
 	}
 	
+	function selectkain($user){
+        $this->db->select('*');
+		$this->db->from('kain');
+		//$this->db->where('nama', $user);
+		$query = $this->db->get();
+		return $query;
+	}
+
 	function selectpesanan2($user){
         $this->db->select('*');
 		$this->db->from('pesanan');

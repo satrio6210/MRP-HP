@@ -379,6 +379,15 @@ class Lapangan extends CI_Controller {
             $this->load->view('lapangan/pesanan', $tampil);
             $this->load->view('lapangan/footer');       
     }
+
+    public function kain($page = 'kain'){
+            $data = $this->data->selectkain($this->session->userdata('nama'))->result_array();
+            $tampil['kain'] = $data;
+            $tampil['page'] = $page;
+            $this->load->view('lapangan/header', $tampil);
+            $this->load->view('lapangan/kain', $tampil);
+            $this->load->view('lapangan/footer');       
+    }
         
     public function logout(){
         unset($_SESSION['username']);    
