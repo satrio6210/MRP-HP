@@ -24,7 +24,7 @@
                                     <th>qty</th>
                                     <th>tanggal_pesan</th>                                
                                     <th>Status</th>
-                                    <th>HAPUS</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +45,7 @@
                                        }
                                    ?></td>
                                    <td class="center">
+                                    <a class="btn btn-primary btn-outline" href="<?php echo base_url()."index.php/admin/editDatakain/".$g['id']?>">ROP</a>
                                         <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['id']?>">Hapus</a>
                                     </td>
                                 </tr>

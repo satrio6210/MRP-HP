@@ -97,9 +97,9 @@
                     <li>
                         <a href="<?php echo base_url('index.php/admin/datapesanan') ?>"><i class="fa fa-fw fa-edit"></i> Data Pemesanan</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="<?php echo base_url('index.php/admin/hitungROP') ?>"><i class="fa fa-fw fa-edit"></i> Hitung ROP</a>
-                    </li>
+                    </li>-->
                     <!--<li>
                         <a href="<?php echo base_url('index.php/admin/datapenyewaan') ?>"><i class="fa fa-fw fa-edit"></i> Data Penyewaan</a>
                     </li>-->

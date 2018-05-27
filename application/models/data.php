@@ -148,7 +148,7 @@ class data extends CI_Model
 	}
 
 	function selectkain(){
-            return $this->db->query('SELECT `id`, `kategori`, `warna`, `kode_warna`, `motif`, `qty`, `tanggal_pesan`, `status` FROM `kain` WHERE 1'
+            return $this->db->query('SELECT `id`, `kategori`, `warna`, `kode_warna`, `motif`, `qty`, `tanggal_pesan`, `status`, `safetystock` FROM `kain` WHERE 1'
             );
 	}
 
@@ -163,6 +163,11 @@ class data extends CI_Model
 		return $query->result_array();
 	}
 
+	function getDatakain($where="") {
+		$query = $this->db->query('select safetystock from kain ' .$where);
+		return $query->result_array();
+	}
+
 	function createpesanan($table, $data){
 		$this->db->insert($data, $table);
 	}
@@ -171,6 +176,13 @@ class data extends CI_Model
 		$this->db->select('*');
  		$this->db->from('pesanan');
  		$this->db->where('no', $no);
+ 		$query = $this->db->get();
+ 		return $query->result_array();
+    }
+
+    function get_safetystock(){
+		$this->db->select('*');
+ 		$this->db->from('kain');
  		$query = $this->db->get();
  		return $query->result_array();
     }

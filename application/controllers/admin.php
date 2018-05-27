@@ -393,6 +393,11 @@ class admin extends CI_Controller {
 
     function hitungROP(){
         if ($this->session->has_userdata('username_admin')) {
+
+            //$this->data->get_safetystock('kain');
+            //$data = $this->data->read('kain')->result_array();
+            //$kain['kain'] = $data;
+
             $this->load->view('admin/headermasuk');
             $this->load->view('admin/hitungROP');
             $this->load->view('admin/footer');
@@ -544,6 +549,7 @@ class admin extends CI_Controller {
         $this->load->view('admin/editDatabahan', $data);
         $this->load->view('admin/footer');}
 
+
     function doEditbahan(){
         $config['upload_path']          = './assets/lapangan/image/';
         $config['allowed_types']        = 'gif|jpg|png';
@@ -589,5 +595,47 @@ class admin extends CI_Controller {
         }
         else{
             redirect(base_url('index.php/admin/index'));}}
+
+    function editDatakain($id){
+        $update = $this->data->getDatakain("where id = '$id'");
+
+            
+            $safetystock = $update[0]['safetystock'];
+            $data = array(
+                
+                'safetystock' => $safetystock, 
+                );
+        $this->load->view('admin/headermasuk');
+        $this->load->view('admin/hitungROP', $data);
+        $this->load->view('admin/footer');}
+
+    function hitung(){
+        
+        $safetystock = $_POST['safetystock'];
+        $rr = $_POST['rr'];
+        $lt = $_POST['lt'];
+
+        //$safetystock = $this->input->post('safetystock');
+        //$rr = $this->input->post('rr');
+        //$lt = $this->input->post('lt');
+
+        //echo $safetystock ;
+        //echo $rr ;
+        //echo $lt ;
+        //echo 'TESTING' ;
+        $hasil = ($lt*$rr)+($safetystock);
+        
+        $data = array(
+                'safetystock' => $safetystock,
+                'rr' => $rr,
+                'lt' => $lt,
+                'hasil' => $hasil, 
+                );
+        
+            $this->load->view('admin/headermasuk');
+            $this->load->view('admin/hasilROP', $data);
+            $this->load->view('admin/footer');
+
+    }
     
 }
