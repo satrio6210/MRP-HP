@@ -22,7 +22,6 @@
                                 <p class="col-md-6"><input type="date" class="form-control" placeholder="tanggal" name="tanggal" required></p>
                                 <p class="col-md-6"><input type="text" class="form-control" placeholder="supplier" name="supplier" required></p>
                                 <p class="col-md-6"><input type="text" class="form-control" placeholder="lokasi" name="lokasi" required></p>
-                                <p class="col-md-6"><input type="text" class="form-control" placeholder="stock" name="Stock" required></p>
                                 <p class="col-md-6"><input type="file" class="form-control" placeholder="Picture" name="gambar" required></p>
                                 <br>
                                 <p class="col-lg-12"><input type="submit" value="Add" class="btn btn-warning" name=""></p>

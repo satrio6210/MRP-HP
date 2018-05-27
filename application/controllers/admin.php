@@ -365,19 +365,7 @@ class admin extends CI_Controller {
         $res = $this->data->deleteData($where); 
         redirect('admin/datapesanan');
     }
-
-    function deleteDatakain($id){  
-        $where = array('id' => $id ); 
-        $res = $this->data->deleteDatakain($where); 
-        redirect('admin/datakain');
-    }
     
-    function deleteDatapesanan($id){  
-        $where = array('no' => $id ); 
-        $res = $this->data->deleteDatapesanan($where); 
-        redirect('admin/datapesanan');
-    }
-
     public function validasi($id){
         $where = array('no' => $id);
         $status ["status"] = 1;
@@ -394,9 +382,9 @@ class admin extends CI_Controller {
         $status ["status"] = 1;
         $this->data->updateData('kain', $status, $where);
         $data = $this->data->read('kain')->result_array();
-        $datakain['kain'] = $data;
+        $kain['kain'] = $data;
         $this->load->view('admin/headermasuk1');
-        $this->load->view('admin/datakain', $datakain);
+        $this->load->view('admin/datakain', $kain);
         $this->load->view('admin/footer');
     }
 

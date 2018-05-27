@@ -71,8 +71,8 @@
                         <a href="<?php echo base_url('index.php/admin/dashboard') ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('index.php/admin/inputbahan') ?>"><i class="fa fa-fw fa-edit"></i>I</a>
-                    </li> 
+                        <a href="<?php echo base_url('index.php/admin/inputbahan') ?>"><i class="fa fa-fw fa-edit"></i> Input Data Bahan baku</a>
+                    </li>
                     <li>
                         <a href="<?php echo base_url('index.php/admin/inputkain') ?>"><i class="fa fa-fw fa-edit"></i> Input Kain</a>
                     </li>
@@ -89,13 +89,13 @@
                         <a href="<?php echo base_url('index.php/admin/datalapangan') ?>"><i class="fa fa-fw fa-table"></i> Data Lapangan</a>
                     </li>-->
                     <li>
-                        <a href="<?php echo base_url('index.php/admin/databahan') ?>"><i class="fa fa-fw fa-table"></i> I</a>
+                        <a href="<?php echo base_url('index.php/admin/databahan') ?>"><i class="fa fa-fw fa-table"></i> Data Bahan Baku</a>
                     </li>
                     <!--<<li>
                         <a href="<?php echo base_url('index.php/admin/datakompetisi') ?>"><i class="fa fa-fw fa-table"></i> Data Kompetisi</a>
                     </li>-->
                     <li>
-                        <a href="<?php echo base_url('index.php/admin/datapesanan') ?>"><i class="fa fa-fw fa-edit"></i>I</a>
+                        <a href="<?php echo base_url('index.php/admin/datapesanan') ?>"><i class="fa fa-fw fa-edit"></i> Data Pemesanan</a>
                     </li>
                     <!--<li>
                         <a href="<?php echo base_url('index.php/admin/hitungROP') ?>"><i class="fa fa-fw fa-edit"></i> Hitung ROP</a>

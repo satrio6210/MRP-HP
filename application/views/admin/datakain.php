@@ -21,7 +21,7 @@
                                     <th>warna</th>
                                     <th>kode-warna</th>
                                     <th>motif</th>
-                                    <th>qty (m)</th>
+                                    <th>qty</th>
                                     <th>tanggal_pesan</th>                                
                                     <th>Status</th>
                                     <th>Action</th>
@@ -45,12 +45,8 @@
                                        }
                                    ?></td>
                                    <td class="center">
-<<<<<<< HEAD
                                     <a class="btn btn-primary btn-outline" href="<?php echo base_url()."index.php/admin/editDatakain/".$g['id']?>">ROP</a>
                                         <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['id']?>">Hapus</a>
-=======
-                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteDatakain/".$g['id']?>">Hapus</a>
->>>>>>> 4f8ed8eb00d3406166dc6902df60d8b6713c569b
                                     </td>
                                 </tr>
                             <?php } ?>

@@ -47,7 +47,7 @@
                                        }
                                    ?></td>
                                    <td class="center">
-                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteDatapesanan/".$g['no']?>">Hapus</a>
+                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['no']?>">Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>
