@@ -19,7 +19,7 @@
                                     <th>qty</th>
                                     <th>tanggal pesan</th>                                   
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <!--<th>Action</th>-->
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,8 +38,10 @@
                                             echo '<a class="btn btn-success btn-outline" >Sudah</a>';
                                        }
 
-                                   ?></td>
-                                   <td><a class="btn btn-danger btn-outline" href="<?php echo base_url()."lapangan/uploadnota/".$g['id']?>">Upload</a></td>
+                                   ?>
+                                     
+                                   <!--</td>
+                                   <td><a class="btn btn-danger btn-outline" href="<?php echo base_url()."lapangan/uploadnota/".$g['id']?>">Upload</a></td>-->
                                 </tr>
                             <?php } ?>
                             </tbody>

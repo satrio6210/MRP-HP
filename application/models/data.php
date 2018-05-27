@@ -191,6 +191,18 @@ class data extends CI_Model
 		return $res;
 	}
     
+	function deleteDatakain($item){  
+		$this->db->where_in('id', $item);  
+		$res = $this->db->delete('kain'); 
+		return $res;
+	}
+
+	function deleteDatapesanan($item){  
+		$this->db->where_in('no', $item);  
+		$res = $this->db->delete('pesanan'); 
+		return $res;
+	}
+
     function deleteUser($item){  
 		$this->db->where_in('id_user', $item);  
 		$res = $this->db->delete('user'); 

@@ -21,7 +21,7 @@
                                     <th>warna</th>
                                     <th>kode-warna</th>
                                     <th>motif</th>
-                                    <th>qty</th>
+                                    <th>qty (m)</th>
                                     <th>tanggal_pesan</th>                                
                                     <th>Status</th>
                                     <th>HAPUS</th>
@@ -45,7 +45,7 @@
                                        }
                                    ?></td>
                                    <td class="center">
-                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteData/".$g['id']?>">Hapus</a>
+                                        <a class="btn btn-danger btn-outline" href="<?php echo base_url()."index.php/admin/deleteDatakain/".$g['id']?>">Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>
