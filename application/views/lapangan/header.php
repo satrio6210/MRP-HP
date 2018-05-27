@@ -34,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="<?php echo base_url();?>">Nama Toko</a>
+        <a class="navbar-brand" href="<?php echo base_url();?>">Stark Clothing</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -64,7 +64,7 @@
             <li class="nav-item">
               <?php 
               if($this->session->has_userdata('username')){
-                echo '<a class="nav-link" href="'.base_url('lapangan/pesanan').'">History Pemesanan</a>';
+                echo '<a class="nav-link" href="'.base_url('lapangan/pesanan').'">I</a>';
               }
             ?>
             </li>
@@ -92,8 +92,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Nama Toko</h1>
-              <span class="subheading">Tempat pemesanan [enter your description here]</span>
+              <h1>Stark Clothing</h1>
+              <span class="subheading">UMKM Konveksi Sesuai Kantong Mahasiswa</span>
             </div>
           </div>
         </div>
